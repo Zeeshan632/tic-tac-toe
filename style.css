@@ -6,15 +6,23 @@
 }
 
 body {
-	display: flex;
 	height: 100vh;
-	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
 	align-items: center;
 }
-
+.main-heading {
+	font-size: 5rem;
+	color: orange;
+	width: 100vw;
+	text-align: center;
+	background: rgba(255, 186, 164, 0.618);
+	margin: 50px 0;
+}
 .turns {
-	position: absolute;
-	top: 60px;
+	text-align: center;
+	margin-bottom: 50px;
 }
 
 .main-container {
@@ -64,4 +72,31 @@ body {
 	font-size: 5rem;
 	font-weight: 700;
 	pointer-events: none;
+}
+
+/* Making it responsive */
+
+@media only screen and (max-width: 425px) {
+	.main-heading {
+		font-size: 4rem;
+	}
+	.main-container {
+		width: 21rem;
+		height: 21rem;
+	}
+	.cross-tag {
+		font-size: 3rem;
+	}
+	.zero-tag {
+		font-size: 4rem;
+	}
+}
+@media only screen and (max-width: 280px) {
+	.main-heading {
+		font-size: 3rem;
+	}
+	.main-container {
+		width: 17rem;
+		height: 17rem;
+	}
 }
